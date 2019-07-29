@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Custom dialog background full transparent borderless theme -->
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <!--Background color and transparency-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Whether to remove the title -->
+        <item name="android:windowNoTitle">true</item>
+        <!--Whether to remove the border-->
+        <item name="android:windowFrame">@null</item>
+        <!--Whether it is above the activity-->
+        <item name="android:windowIsFloating">true</item>
+        <!--Whether it is fuzzy-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BottomPopupWindow">
+        <item name="android:windowEnterAnimation">@anim/main_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/main_bottom_exit</item>
+    </style>
+
+
+</resources>
+
+
