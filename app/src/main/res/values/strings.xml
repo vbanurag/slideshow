@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ImageEditorDemo</string>
+    <string name="app_name">Slideshow</string>
 
     <string name="main_page_title">List of works</string>
     <string name="main_page_take_photo">Take a Picture</string>

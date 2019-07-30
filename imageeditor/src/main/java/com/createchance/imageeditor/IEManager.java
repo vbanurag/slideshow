@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.TextureView;
 
-import com.createchance.imageeditor.freetype.FreeType;
 import com.createchance.imageeditor.ops.AbstractOperator;
 import com.createchance.imageeditor.transitions.AbstractTransition;
 import com.createchance.imageeditor.utils.Logger;
@@ -41,10 +40,7 @@ public class IEManager {
     public static final int IMG_FORMAT_JPEG = 2;
     public static final int IMG_FORMAT_WEBP = 3;
 
-    private IEManager() {
-        // init freetype
-        //FreeType.init();
-    }
+    private IEManager() {}
 
     public static IEManager getInstance() {
         return Holder.sInstance;

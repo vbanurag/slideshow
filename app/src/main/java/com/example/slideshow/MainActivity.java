@@ -1,7 +1,6 @@
 package com.example.slideshow;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -57,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private MainSelectionWindow mVwBottomSelection;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mWorkListView.setLayoutManager(new LinearLayoutManager(this));
         mWorkListView.setAdapter(mWorkListAdapter);
 
-        Log.d("click", "On Button : "+findViewById(R.id.start_slideshow));
+        Log.d("click", "On Button : ");
 
         final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -317,7 +315,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                         intent.setDataAndType(FileProvider.getUriForFile(MainActivity.this,
-                                "com.createchance.imageeditordemo.fileprovider",
+                                "com.example.slideshow.fileprovider",
                                 mCurWorkItem.mImage), type);
                     } else {
                         intent.setDataAndType(Uri.fromFile(mCurWorkItem.mImage), type);
@@ -338,7 +336,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                         intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(MainActivity.this,
-                                "com.createchance.imageeditordemo.fileprovider",
+                                "com.example.slideshow.fileprovider",
                                 mCurWorkItem.mImage));
                     } else {
                         intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(mCurWorkItem.mImage));
